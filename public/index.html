@@ -10,17 +10,18 @@ main{max-width:1100px;margin:0 auto;padding:18px}.tabs{display:grid;grid-templat
 button{border:0;border-radius:13px;padding:11px 14px;font-weight:900;cursor:pointer}.tab{background:white;border:1px solid #e5e7eb}.tab.active{background:#2563eb;color:white}
 .panel{display:none}.panel.active{display:block}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:16px}.card{background:white;border:1px solid #e5e7eb;border-radius:20px;padding:18px;box-shadow:0 10px 25px rgba(0,0,0,.06)}
-.flash{height:405px;perspective:1000px}.inner{position:relative;width:100%;height:100%;transition:.55s;transform-style:preserve-3d;cursor:pointer}.flash.flipped .inner{transform:rotateY(180deg)}
+.flash{height:430px;perspective:1000px}.inner{position:relative;width:100%;height:100%;transition:.55s;transform-style:preserve-3d;cursor:pointer}.flash.flipped .inner{transform:rotateY(180deg)}
 .face{position:absolute;inset:0;background:white;border:1px solid #e5e7eb;border-radius:22px;padding:22px;backface-visibility:hidden;overflow:auto;box-shadow:0 10px 25px rgba(0,0,0,.08)}
 .front{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.back{transform:rotateY(180deg)}
-.word{font-size:33px;font-weight:1000;margin:12px 0;text-align:center}.ipa,.muted,.small{color:#6b7280}.small{font-size:13px}.pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:5px 10px;font-weight:900;font-size:12px;margin:2px}
+.word{font-size:33px;font-weight:1000;margin:12px 0;text-align:center}.meaning-front{font-size:18px;font-weight:800;margin:6px 0;color:#1f2937}
+.ipa,.muted,.small{color:#6b7280}.small{font-size:13px}.pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:5px 10px;font-weight:900;font-size:12px;margin:2px}
 .primary{background:#2563eb;color:white}.success{background:#16a34a;color:white}.secondary{background:#e5e7eb;color:#111827}.danger{background:#fee2e2;color:#991b1b}
 .box{background:#f9fafb;border:1px solid #e5e7eb;border-radius:13px;padding:10px;margin-top:6px;line-height:1.55}.label{font-weight:1000;margin-top:12px}.status{background:#eff6ff;border:1px solid #bfdbfe;border-radius:14px;padding:12px;margin-bottom:16px;font-weight:800;color:#1e40af}
 .record{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #e5e7eb;padding:12px 0}.record:last-child{border-bottom:0}
 .quiz-option{display:block;width:100%;text-align:left;margin-top:8px;background:#f3f4f6;border:1px solid #e5e7eb;color:#111827}.correct{background:#dcfce7!important}.wrong{background:#fee2e2!important}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}.stats b{font-size:24px}
 select{padding:10px;border:1px solid #e5e7eb;border-radius:12px;background:white;font-weight:700}
-@media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.flash{height:430px}.word{font-size:28px}}
+@media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.flash{height:455px}.word{font-size:28px}.meaning-front{font-size:16px}}
 </style></head>
 <body>
 <header><h1>Daily English Coach 600</h1><p>해외영업 40% · 비즈니스 30% · 일상 30% · 최근 60일 중복 방지</p></header>
@@ -54,44 +55,16 @@ function setStatus(t){document.getElementById("status").textContent=t}
 function daysAgo(n){let d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10)}
 function recentLearned(days=60){let r=records(), set=new Set();for(let i=0;i<days;i++){let item=r[daysAgo(i)];if(item)(item.words||[]).forEach(w=>set.add(w.id))}return set}
 function streak(){let r=records(), s=0;for(let i=0;i<365;i++){if(r[daysAgo(i)]?.completed)s++;else break}return s}
-function pool(){
- let c=getCat(), l=getLevel(); let arr=WORDS.filter(w=>l==="all"||w.level===l);
- if(c==="mixed") return arr;
- return arr.filter(w=>w.category===c);
-}
-function pickByRatio(arr, avoid){
- let c=getCat(); let selected=[];
- function pickOne(cat){
-  let p=arr.filter(w=>(cat==="any"||w.category===cat)&&!avoid.has(w.id)&&!selected.some(x=>x.id===w.id));
-  if(!p.length)p=arr.filter(w=>(cat==="any"||w.category===cat)&&!selected.some(x=>x.id===w.id));
-  if(!p.length)return null;
-  return p[Math.floor(Math.random()*p.length)];
- }
- if(c==="mixed"){
-   [["sales"],["business"],["daily"]].forEach(x=>{let v=pickOne(x[0]); if(v)selected.push(v)});
- } else {
-   while(selected.length<3){let v=pickOne(c); if(!v)break; selected.push(v);}
- }
- while(selected.length<3){let v=pickOne("any"); if(!v)break; selected.push(v);}
- return selected.slice(0,3);
-}
-function todayWords(force=false){
- const key="words600_"+todayKey()+"_"+getCat()+"_"+getLevel();
- if(!force && localStorage.getItem(key))return load(key,[]);
- const selected=pickByRatio(pool(), recentLearned(60));
- save(key,selected); return selected;
-}
-function render(){
- const words=todayWords();
- document.getElementById("cards").innerHTML=words.map(w=>`<div class="flash" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="face front"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><div class="word">${w.word}</div><div class="ipa">${w.ipa||"발음기호 업데이트 예정"}</div><button class="secondary" onclick="event.stopPropagation();speak('${safe(w.word)}')">발음 듣기 🔊</button><div class="muted" style="margin-top:20px">탭하면 뒤집기</div></div><div class="face back"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><h2>${w.word}</h2><div class="label">뜻</div><div>${w.meaning}</div><div class="label">예문</div><div class="box">${w.example}<br><span class="small">${w.translation}</span></div><div class="label">💡 연상</div><div class="box">${w.memory}</div><div class="label">관련 표현</div><div class="box">${(w.related||[]).map(x=>"• "+x).join("<br>")}</div></div></div></div>`).join("");
- updateStats();
-}
+function pool(){let c=getCat(), l=getLevel(); let arr=WORDS.filter(w=>l==="all"||w.level===l); if(c==="mixed") return arr; return arr.filter(w=>w.category===c);}
+function pickByRatio(arr, avoid){let c=getCat(); let selected=[]; function pickOne(cat){let p=arr.filter(w=>(cat==="any"||w.category===cat)&&!avoid.has(w.id)&&!selected.some(x=>x.id===w.id)); if(!p.length)p=arr.filter(w=>(cat==="any"||w.category===cat)&&!selected.some(x=>x.id===w.id)); if(!p.length)return null; return p[Math.floor(Math.random()*p.length)];} if(c==="mixed"){["sales","business","daily"].forEach(cat=>{let v=pickOne(cat); if(v)selected.push(v)});} else {while(selected.length<3){let v=pickOne(c); if(!v)break; selected.push(v);}} while(selected.length<3){let v=pickOne("any"); if(!v)break; selected.push(v);} return selected.slice(0,3);}
+function todayWords(force=false){const key="words600_"+todayKey()+"_"+getCat()+"_"+getLevel(); if(!force && localStorage.getItem(key))return load(key,[]); const selected=pickByRatio(pool(), recentLearned(60)); save(key,selected); return selected;}
+function render(){const words=todayWords();document.getElementById("cards").innerHTML=words.map(w=>`<div class="flash" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="face front"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><div class="word">${w.word}</div><div class="meaning-front">${w.shortMeaning||w.meaning}</div><div class="ipa">${w.ipa}</div><button class="secondary" onclick="event.stopPropagation();speak('${safe(w.word)}')">발음 듣기 🔊</button><div class="muted" style="margin-top:20px">탭하면 예문 보기</div></div><div class="face back"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><h2>${w.word}</h2><div class="label">뜻</div><div>${w.meaning}</div><div class="label">예문</div><div class="box">${w.example}<br><span class="small">${w.translation}</span></div><div class="label">💡 연상</div><div class="box">${w.memory}</div><div class="label">관련 표현</div><div class="box">${(w.related||[]).map(x=>"• "+x).join("<br>")}</div></div></div></div>`).join(""); updateStats();}
 function regenerateWords(){localStorage.removeItem("words600_"+todayKey()+"_"+getCat()+"_"+getLevel());todayWords(true);render();setStatus("최근 60일 학습 단어를 제외하고 새 단어를 다시 뽑았습니다.")}
 function completeToday(){let r=records();r[todayKey()]={completed:true,at:new Date().toISOString(),words:todayWords()};save("records600",r);renderRecords();updateStats();setStatus("오늘 학습 완료로 저장했습니다.")}
 function renderRecords(){let r=records(), keys=Object.keys(r).sort().reverse();document.getElementById("recordsBox").innerHTML=keys.length?keys.map(k=>`<div class="record"><div><b>${fmt(k)}</b><div class="small">${r[k].words.map(w=>w.word).join(", ")}</div></div><div>✅ 완료</div></div>`).join(""):"아직 학습 기록이 없습니다."}
 function dueWords(){let r=records(), out=[];[1,3,7,30].forEach(n=>{let item=r[daysAgo(n)];if(item)(item.words||[]).forEach(w=>{if(!out.some(x=>x.id===w.id))out.push(w)})});return out.length?out:todayWords()}
 function weekWords(){let r=records(), out=[], now=new Date(), start=new Date(now);start.setDate(now.getDate()-((now.getDay()+6)%7));start.setHours(0,0,0,0);Object.keys(r).forEach(k=>{let d=new Date(k+"T00:00:00");if(d>=start)(r[k].words||[]).forEach(w=>{if(!out.some(x=>x.id===w.id))out.push(w)})});return out}
-function buildQuiz(){let src=[...dueWords(),...weekWords()];let uniq=[];src.forEach(w=>{if(!uniq.some(x=>x.id===w.id))uniq.push(w)}); if(!uniq.length)uniq=todayWords();let qs=uniq.sort(()=>Math.random()-.5).slice(0,5);document.getElementById("reviewSummary").innerHTML=`복습 대상: <b>${uniq.length}</b>개 · 1/3/7/30일 전 학습 단어와 이번 주 단어 기준`;document.getElementById("quizBox").innerHTML=qs.map((w,i)=>{let opts=[w.word];while(opts.length<3){let x=WORDS[Math.floor(Math.random()*WORDS.length)].word;if(!opts.includes(x))opts.push(x)}opts.sort(()=>Math.random()-.5);let blank=w.example.replace(new RegExp(escapeReg(w.word),"i"),"_____");return `<div class="card" style="margin-bottom:12px"><b>문제 ${i+1}</b><p>${blank}</p>${opts.map(o=>`<button class="quiz-option" onclick="check(this,'${safe(o)}','${safe(w.word)}')">${o}</button>`).join("")}<p class="small">힌트: ${w.meaning}</p></div>`}).join("")}
+function buildQuiz(){let src=[...dueWords(),...weekWords()];let uniq=[];src.forEach(w=>{if(!uniq.some(x=>x.id===w.id))uniq.push(w)}); if(!uniq.length)uniq=todayWords();let qs=uniq.sort(()=>Math.random()-.5).slice(0,5);document.getElementById("reviewSummary").innerHTML=`복습 대상: <b>${uniq.length}</b>개`;document.getElementById("quizBox").innerHTML=qs.map((w,i)=>{let opts=[w.word];while(opts.length<3){let x=WORDS[Math.floor(Math.random()*WORDS.length)].word;if(!opts.includes(x))opts.push(x)}opts.sort(()=>Math.random()-.5);let blank=w.example.replace(new RegExp(escapeReg(w.word),"i"),"_____");return `<div class="card" style="margin-bottom:12px"><b>문제 ${i+1}</b><p>${blank}</p>${opts.map(o=>`<button class="quiz-option" onclick="check(this,'${safe(o)}','${safe(w.word)}')">${o}</button>`).join("")}<p class="small">힌트: ${w.meaning}</p></div>`}).join("")}
 function check(btn,sel,ans){let all=btn.parentElement.querySelectorAll(".quiz-option");all.forEach(b=>b.disabled=true);if(sel===ans){btn.classList.add("correct");btn.textContent+=" ✅"}else{btn.classList.add("wrong");btn.textContent+=" ❌";all.forEach(b=>{if(b.textContent.trim()===ans){b.classList.add("correct");b.textContent+=" ✅ 정답"}})}}
 function updateStats(){document.getElementById("dbCount").textContent=WORDS.length+"개";document.getElementById("streak").textContent=streak()+"일";document.getElementById("avoidCount").textContent=recentLearned(60).size+"개";let r=records(), learned=new Set();Object.values(r).forEach(v=>(v.words||[]).forEach(w=>learned.add(w.id)));let counts={sales:0,business:0,daily:0};WORDS.filter(w=>learned.has(w.id)).forEach(w=>counts[w.category]++);document.getElementById("statsBox").innerHTML=`<div class="card"><span class="muted">총 학습</span><br><b>${learned.size}개</b></div><div class="card"><span class="muted">해외영업</span><br><b>${counts.sales}개</b></div><div class="card"><span class="muted">비즈니스</span><br><b>${counts.business}개</b></div><div class="card"><span class="muted">일상</span><br><b>${counts.daily}개</b></div>`}
 function changeSettings(){localStorage.setItem("cat600",document.getElementById("category").value);localStorage.setItem("level600",document.getElementById("level").value);render();setStatus("설정을 변경했습니다.")}
