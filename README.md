@@ -1,5 +1,1 @@
-Daily English Coach V3
-- 해외영업 30%, 비즈니스 40%, 일상 30%
-- 중급 70%, 고급 30%
-- 새 단어 다시 뽑기 삭제
-- 최근 60일 학습 단어 제외
+Daily English Coach V4 - Season 1 90개 DB 포함

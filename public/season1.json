@@ -1,0 +1,1892 @@
+[
+  {
+    "id": "s1-001",
+    "day": 1,
+    "word": "alignment",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "의견 조율",
+      "방향 일치"
+    ],
+    "example": "We need internal alignment before responding to the customer.",
+    "translation": "고객에게 답변하기 전에 내부 의견 조율이 필요합니다.",
+    "emailExample": "We would like to ensure internal alignment before submitting our final offer.",
+    "emailTranslation": "최종 제안 제출 전에 내부 의견 조율을 진행하고자 합니다.",
+    "related": [
+      "alignment update",
+      "alignment issue",
+      "alignment review"
+    ],
+    "visual": "영업팀 →\n생산팀 → 🎯 고객 대응\n품질팀 →"
+  },
+  {
+    "id": "s1-002",
+    "day": 1,
+    "word": "lead time",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "납기 소요 기간",
+      "제작 기간"
+    ],
+    "example": "The lead time will be 45 days after drawing approval.",
+    "translation": "도면 승인 후 리드타임은 45일입니다.",
+    "emailExample": "The lead time will be confirmed once the drawing is approved.",
+    "emailTranslation": "도면 승인 후 리드타임을 확정할 예정입니다.",
+    "related": [
+      "lead time update",
+      "lead time issue",
+      "lead time review"
+    ],
+    "visual": "📦 주문\n↓\n🏭 생산\n↓\n🔍 검사\n↓\n🚢 선적\n↓\n🏢 도착"
+  },
+  {
+    "id": "s1-003",
+    "day": 1,
+    "word": "figure out",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "알아내다",
+      "해결 방법을 찾다"
+    ],
+    "example": "I need to figure out how to solve this issue.",
+    "translation": "이 문제를 어떻게 해결할지 알아내야 합니다.",
+    "emailExample": "We are trying to figure out the cause of the delay.",
+    "emailTranslation": "지연 원인을 파악하고 있습니다.",
+    "related": [
+      "figure out update",
+      "figure out issue",
+      "figure out review"
+    ],
+    "visual": "🤔 ? ? ?\n↓\n💡\n↓\n정답 발견"
+  },
+  {
+    "id": "s1-004",
+    "day": 2,
+    "word": "stakeholder",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "이해관계자",
+      "프로젝트 관련자"
+    ],
+    "example": "All stakeholders should be informed before the decision is finalized.",
+    "translation": "결정이 확정되기 전에 모든 이해관계자에게 알려야 합니다.",
+    "emailExample": "We will share the update with all relevant stakeholders.",
+    "emailTranslation": "관련 이해관계자들에게 업데이트를 공유하겠습니다.",
+    "related": [
+      "stakeholder update",
+      "stakeholder issue",
+      "stakeholder review"
+    ],
+    "visual": "고객 / 공급사 / 경영진 / 영업\n→ 프로젝트를 둘러싼 사람들"
+  },
+  {
+    "id": "s1-005",
+    "day": 2,
+    "word": "quotation",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "견적서",
+      "견적 금액"
+    ],
+    "example": "Please review the attached quotation.",
+    "translation": "첨부 견적서를 검토 부탁드립니다.",
+    "emailExample": "Please find attached our revised quotation.",
+    "emailTranslation": "수정된 견적서를 첨부드립니다.",
+    "related": [
+      "quotation update",
+      "quotation issue",
+      "quotation review"
+    ],
+    "visual": "고객 문의\n↓\n💰 가격 계산\n↓\n📄 견적서"
+  },
+  {
+    "id": "s1-006",
+    "day": 2,
+    "word": "run into",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "문제를 겪다",
+      "우연히 만나다"
+    ],
+    "example": "We ran into a delay during production.",
+    "translation": "생산 중 지연 문제가 발생했습니다.",
+    "emailExample": "We have run into an unexpected issue.",
+    "emailTranslation": "예상치 못한 문제가 발생했습니다.",
+    "related": [
+      "run into update",
+      "run into issue",
+      "run into review"
+    ],
+    "visual": "🚶‍♂️\n↓\n💥\n↓\n문제 발생"
+  },
+  {
+    "id": "s1-007",
+    "day": 3,
+    "word": "prioritize",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "우선순위를 정하다",
+      "우선 처리하다"
+    ],
+    "example": "Please prioritize urgent customer requests.",
+    "translation": "긴급 고객 요청을 우선 처리해 주세요.",
+    "emailExample": "We will prioritize this matter and provide an update shortly.",
+    "emailTranslation": "본 건을 우선 처리하고 곧 업데이트 드리겠습니다.",
+    "related": [
+      "prioritize update",
+      "prioritize issue",
+      "prioritize review"
+    ],
+    "visual": "1️⃣ 긴급\n2️⃣ 중요\n3️⃣ 일반"
+  },
+  {
+    "id": "s1-008",
+    "day": 3,
+    "word": "shipment",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "선적",
+      "발송"
+    ],
+    "example": "The shipment is scheduled for next week.",
+    "translation": "선적은 다음 주 예정입니다.",
+    "emailExample": "We will update you once the shipment has been dispatched.",
+    "emailTranslation": "선적이 완료되면 업데이트 드리겠습니다.",
+    "related": [
+      "shipment update",
+      "shipment issue",
+      "shipment review"
+    ],
+    "visual": "📦 → 🚢 → 🏢"
+  },
+  {
+    "id": "s1-009",
+    "day": 3,
+    "word": "come across",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "우연히 발견하다",
+      "~라는 인상을 주다"
+    ],
+    "example": "I came across an interesting article yesterday.",
+    "translation": "어제 흥미로운 기사를 우연히 발견했습니다.",
+    "emailExample": "I came across a document that may be helpful.",
+    "emailTranslation": "도움이 될 만한 문서를 발견했습니다.",
+    "related": [
+      "come across update",
+      "come across issue",
+      "come across review"
+    ],
+    "visual": "📂\n↓\n👀 발견"
+  },
+  {
+    "id": "s1-010",
+    "day": 4,
+    "word": "feasible",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "실현 가능한",
+      "실행 가능한"
+    ],
+    "example": "Please check whether the schedule is feasible.",
+    "translation": "일정이 실현 가능한지 확인해 주세요.",
+    "emailExample": "We believe this proposal is technically feasible.",
+    "emailTranslation": "본 제안은 기술적으로 실현 가능하다고 판단됩니다.",
+    "related": [
+      "feasible update",
+      "feasible issue",
+      "feasible review"
+    ],
+    "visual": "요청 → 검토 → ✅ 가능"
+  },
+  {
+    "id": "s1-011",
+    "day": 4,
+    "word": "follow up on",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "후속 확인하다",
+      "진행 상황을 점검하다"
+    ],
+    "example": "I would like to follow up on the quotation.",
+    "translation": "견적 건에 대해 후속 확인 드리고자 합니다.",
+    "emailExample": "We are following up on the status of our proposal.",
+    "emailTranslation": "당사 제안서 진행 상황을 확인하고자 합니다.",
+    "related": [
+      "follow up on update",
+      "follow up on issue",
+      "follow up on review"
+    ],
+    "visual": "📧 발송 → ⏳ 대기 → 📞 확인"
+  },
+  {
+    "id": "s1-012",
+    "day": 4,
+    "word": "bring up",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "언급하다",
+      "화제를 꺼내다"
+    ],
+    "example": "She brought up an important point during the meeting.",
+    "translation": "그녀는 회의 중 중요한 점을 언급했습니다.",
+    "emailExample": "I would like to bring up one concern regarding the schedule.",
+    "emailTranslation": "일정과 관련해 우려 사항 하나를 말씀드리고자 합니다.",
+    "related": [
+      "bring up update",
+      "bring up issue",
+      "bring up review"
+    ],
+    "visual": "💬⬆️ 화제 제기"
+  },
+  {
+    "id": "s1-013",
+    "day": 5,
+    "word": "mitigate",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "완화하다",
+      "줄이다"
+    ],
+    "example": "We need to mitigate the delivery risk.",
+    "translation": "납기 리스크를 줄여야 합니다.",
+    "emailExample": "We are taking actions to mitigate the impact.",
+    "emailTranslation": "영향을 줄이기 위한 조치를 취하고 있습니다.",
+    "related": [
+      "mitigate update",
+      "mitigate issue",
+      "mitigate review"
+    ],
+    "visual": "🚨 위험 → 🛡️ 조치 → ⚠️ 감소"
+  },
+  {
+    "id": "s1-014",
+    "day": 5,
+    "word": "discrepancy",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "불일치",
+      "차이"
+    ],
+    "example": "There is a discrepancy between the PO and the quotation.",
+    "translation": "발주서와 견적서 사이에 차이가 있습니다.",
+    "emailExample": "Please review the discrepancy highlighted below.",
+    "emailTranslation": "아래 표시된 불일치 사항을 검토 부탁드립니다.",
+    "related": [
+      "discrepancy update",
+      "discrepancy issue",
+      "discrepancy review"
+    ],
+    "visual": "PO: 100 EA\nQTN: 120 EA\n❌ 불일치"
+  },
+  {
+    "id": "s1-015",
+    "day": 5,
+    "word": "work out",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "해결되다",
+      "잘 진행되다"
+    ],
+    "example": "I hope everything works out well.",
+    "translation": "모든 일이 잘 해결되길 바랍니다.",
+    "emailExample": "We expect the issue to work out soon.",
+    "emailTranslation": "해당 문제가 곧 해결될 것으로 예상합니다.",
+    "related": [
+      "work out update",
+      "work out issue",
+      "work out review"
+    ],
+    "visual": "문제 → 🔧 → ✅ 해결"
+  },
+  {
+    "id": "s1-016",
+    "day": 6,
+    "word": "benchmark",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "기준으로 삼다",
+      "벤치마킹하다"
+    ],
+    "example": "We need to review the benchmark before moving forward.",
+    "translation": "진행하기 전에 기준으로 삼다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the benchmark and will provide an update shortly.",
+    "emailTranslation": "기준으로 삼다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "benchmark update",
+      "benchmark issue",
+      "benchmark review"
+    ],
+    "visual": "업무 상황\n↓\n기준으로 삼다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-017",
+    "day": 6,
+    "word": "payment terms",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "결제 조건",
+      "지급 조건"
+    ],
+    "example": "Please confirm the payment terms before we proceed.",
+    "translation": "진행 전에 결제 조건을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the payment terms and let us know if you have any comments.",
+    "emailTranslation": "결제 조건을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "payment terms update",
+      "payment terms issue",
+      "payment terms review"
+    ],
+    "visual": "📄 결제 조건\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-018",
+    "day": 6,
+    "word": "catch up with",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "근황을 나누다",
+      "따라잡다"
+    ],
+    "example": "We need to catch up with this issue today.",
+    "translation": "오늘 이 문제를 근황을 나누다해야 합니다.",
+    "emailExample": "We will catch up with this matter and get back to you.",
+    "emailTranslation": "이 사안을 근황을 나누다한 뒤 회신드리겠습니다.",
+    "related": [
+      "catch up with update",
+      "catch up with issue",
+      "catch up with review"
+    ],
+    "visual": "상황 발생\n↓\n근황을 나누다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-019",
+    "day": 7,
+    "word": "contingency",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "비상 대책",
+      "예비 계획"
+    ],
+    "example": "We need to review the contingency before moving forward.",
+    "translation": "진행하기 전에 비상 대책을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the contingency and will provide an update shortly.",
+    "emailTranslation": "비상 대책을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "contingency update",
+      "contingency issue",
+      "contingency review"
+    ],
+    "visual": "업무 상황\n↓\n비상 대책\n↓\n의사결정"
+  },
+  {
+    "id": "s1-020",
+    "day": 7,
+    "word": "deviation request",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "사양 이탈 승인 요청",
+      "편차 승인 요청"
+    ],
+    "example": "Please confirm the deviation request before we proceed.",
+    "translation": "진행 전에 사양 이탈 승인 요청을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the deviation request and let us know if you have any comments.",
+    "emailTranslation": "사양 이탈 승인 요청을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "deviation request update",
+      "deviation request issue",
+      "deviation request review"
+    ],
+    "visual": "📄 사양 이탈 승인 요청\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-021",
+    "day": 7,
+    "word": "point out",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "지적하다",
+      "알려주다"
+    ],
+    "example": "We need to point out this issue today.",
+    "translation": "오늘 이 문제를 지적하다해야 합니다.",
+    "emailExample": "We will point out this matter and get back to you.",
+    "emailTranslation": "이 사안을 지적하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "point out update",
+      "point out issue",
+      "point out review"
+    ],
+    "visual": "상황 발생\n↓\n지적하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-022",
+    "day": 8,
+    "word": "streamline",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "간소화하다",
+      "효율화하다"
+    ],
+    "example": "We need to review the streamline before moving forward.",
+    "translation": "진행하기 전에 간소화하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the streamline and will provide an update shortly.",
+    "emailTranslation": "간소화하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "streamline update",
+      "streamline issue",
+      "streamline review"
+    ],
+    "visual": "업무 상황\n↓\n간소화하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-023",
+    "day": 8,
+    "word": "witness inspection",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "입회 검사",
+      "참관 검사"
+    ],
+    "example": "Please confirm the witness inspection before we proceed.",
+    "translation": "진행 전에 입회 검사을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the witness inspection and let us know if you have any comments.",
+    "emailTranslation": "입회 검사을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "witness inspection update",
+      "witness inspection issue",
+      "witness inspection review"
+    ],
+    "visual": "📄 입회 검사\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-024",
+    "day": 8,
+    "word": "sort out",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "정리하다",
+      "해결하다"
+    ],
+    "example": "We need to sort out this issue today.",
+    "translation": "오늘 이 문제를 정리하다해야 합니다.",
+    "emailExample": "We will sort out this matter and get back to you.",
+    "emailTranslation": "이 사안을 정리하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "sort out update",
+      "sort out issue",
+      "sort out review"
+    ],
+    "visual": "상황 발생\n↓\n정리하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-025",
+    "day": 9,
+    "word": "proactive",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "선제적인",
+      "미리 대응하는"
+    ],
+    "example": "We need to review the proactive before moving forward.",
+    "translation": "진행하기 전에 선제적인을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the proactive and will provide an update shortly.",
+    "emailTranslation": "선제적인을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "proactive update",
+      "proactive issue",
+      "proactive review"
+    ],
+    "visual": "업무 상황\n↓\n선제적인\n↓\n의사결정"
+  },
+  {
+    "id": "s1-026",
+    "day": 9,
+    "word": "commercial offer",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "상업 제안서",
+      "가격 제안서"
+    ],
+    "example": "Please confirm the commercial offer before we proceed.",
+    "translation": "진행 전에 상업 제안서을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the commercial offer and let us know if you have any comments.",
+    "emailTranslation": "상업 제안서을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "commercial offer update",
+      "commercial offer issue",
+      "commercial offer review"
+    ],
+    "visual": "📄 상업 제안서\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-027",
+    "day": 9,
+    "word": "come up with",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "생각해내다",
+      "제안하다"
+    ],
+    "example": "We need to come up with this issue today.",
+    "translation": "오늘 이 문제를 생각해내다해야 합니다.",
+    "emailExample": "We will come up with this matter and get back to you.",
+    "emailTranslation": "이 사안을 생각해내다한 뒤 회신드리겠습니다.",
+    "related": [
+      "come up with update",
+      "come up with issue",
+      "come up with review"
+    ],
+    "visual": "상황 발생\n↓\n생각해내다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-028",
+    "day": 10,
+    "word": "scalable",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "확장 가능한",
+      "성장 대응이 가능한"
+    ],
+    "example": "We need to review the scalable before moving forward.",
+    "translation": "진행하기 전에 확장 가능한을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the scalable and will provide an update shortly.",
+    "emailTranslation": "확장 가능한을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "scalable update",
+      "scalable issue",
+      "scalable review"
+    ],
+    "visual": "업무 상황\n↓\n확장 가능한\n↓\n의사결정"
+  },
+  {
+    "id": "s1-029",
+    "day": 10,
+    "word": "NCR",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "부적합 보고서",
+      "품질 불일치 보고"
+    ],
+    "example": "Please confirm the NCR before we proceed.",
+    "translation": "진행 전에 부적합 보고서을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the NCR and let us know if you have any comments.",
+    "emailTranslation": "부적합 보고서을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "NCR update",
+      "NCR issue",
+      "NCR review"
+    ],
+    "visual": "📄 부적합 보고서\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-030",
+    "day": 10,
+    "word": "deal with",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "처리하다",
+      "대응하다"
+    ],
+    "example": "We need to deal with this issue today.",
+    "translation": "오늘 이 문제를 처리하다해야 합니다.",
+    "emailExample": "We will deal with this matter and get back to you.",
+    "emailTranslation": "이 사안을 처리하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "deal with update",
+      "deal with issue",
+      "deal with review"
+    ],
+    "visual": "상황 발생\n↓\n처리하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-031",
+    "day": 11,
+    "word": "leverage",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "활용하다",
+      "최대한 이용하다"
+    ],
+    "example": "We need to review the leverage before moving forward.",
+    "translation": "진행하기 전에 활용하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the leverage and will provide an update shortly.",
+    "emailTranslation": "활용하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "leverage update",
+      "leverage issue",
+      "leverage review"
+    ],
+    "visual": "업무 상황\n↓\n활용하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-032",
+    "day": 11,
+    "word": "technical clarification",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "기술 질의",
+      "기술 확인"
+    ],
+    "example": "Please confirm the technical clarification before we proceed.",
+    "translation": "진행 전에 기술 질의을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the technical clarification and let us know if you have any comments.",
+    "emailTranslation": "기술 질의을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "technical clarification update",
+      "technical clarification issue",
+      "technical clarification review"
+    ],
+    "visual": "📄 기술 질의\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-033",
+    "day": 11,
+    "word": "work on",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "작업하다",
+      "개선하다"
+    ],
+    "example": "We need to work on this issue today.",
+    "translation": "오늘 이 문제를 작업하다해야 합니다.",
+    "emailExample": "We will work on this matter and get back to you.",
+    "emailTranslation": "이 사안을 작업하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "work on update",
+      "work on issue",
+      "work on review"
+    ],
+    "visual": "상황 발생\n↓\n작업하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-034",
+    "day": 12,
+    "word": "allocate",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "배정하다",
+      "할당하다"
+    ],
+    "example": "We need to review the allocate before moving forward.",
+    "translation": "진행하기 전에 배정하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the allocate and will provide an update shortly.",
+    "emailTranslation": "배정하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "allocate update",
+      "allocate issue",
+      "allocate review"
+    ],
+    "visual": "업무 상황\n↓\n배정하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-035",
+    "day": 12,
+    "word": "shipment schedule",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "선적 일정",
+      "출하 계획"
+    ],
+    "example": "Please confirm the shipment schedule before we proceed.",
+    "translation": "진행 전에 선적 일정을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the shipment schedule and let us know if you have any comments.",
+    "emailTranslation": "선적 일정을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "shipment schedule update",
+      "shipment schedule issue",
+      "shipment schedule review"
+    ],
+    "visual": "📄 선적 일정\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-036",
+    "day": 12,
+    "word": "look into",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "조사하다",
+      "검토하다"
+    ],
+    "example": "We need to look into this issue today.",
+    "translation": "오늘 이 문제를 조사하다해야 합니다.",
+    "emailExample": "We will look into this matter and get back to you.",
+    "emailTranslation": "이 사안을 조사하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "look into update",
+      "look into issue",
+      "look into review"
+    ],
+    "visual": "상황 발생\n↓\n조사하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-037",
+    "day": 13,
+    "word": "resolve",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "해결하다",
+      "처리하다"
+    ],
+    "example": "We need to review the resolve before moving forward.",
+    "translation": "진행하기 전에 해결하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the resolve and will provide an update shortly.",
+    "emailTranslation": "해결하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "resolve update",
+      "resolve issue",
+      "resolve review"
+    ],
+    "visual": "업무 상황\n↓\n해결하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-038",
+    "day": 13,
+    "word": "root cause",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "근본 원인",
+      "원인 분석"
+    ],
+    "example": "Please confirm the root cause before we proceed.",
+    "translation": "진행 전에 근본 원인을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the root cause and let us know if you have any comments.",
+    "emailTranslation": "근본 원인을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "root cause update",
+      "root cause issue",
+      "root cause review"
+    ],
+    "visual": "📄 근본 원인\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-039",
+    "day": 13,
+    "word": "get back to",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "다시 연락하다",
+      "회신하다"
+    ],
+    "example": "We need to get back to this issue today.",
+    "translation": "오늘 이 문제를 다시 연락하다해야 합니다.",
+    "emailExample": "We will get back to this matter and get back to you.",
+    "emailTranslation": "이 사안을 다시 연락하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "get back to update",
+      "get back to issue",
+      "get back to review"
+    ],
+    "visual": "상황 발생\n↓\n다시 연락하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-040",
+    "day": 14,
+    "word": "implement",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "실행하다",
+      "도입하다"
+    ],
+    "example": "We need to review the implement before moving forward.",
+    "translation": "진행하기 전에 실행하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the implement and will provide an update shortly.",
+    "emailTranslation": "실행하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "implement update",
+      "implement issue",
+      "implement review"
+    ],
+    "visual": "업무 상황\n↓\n실행하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-041",
+    "day": 14,
+    "word": "payment reminder",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "결제 안내",
+      "결제 독촉"
+    ],
+    "example": "Please confirm the payment reminder before we proceed.",
+    "translation": "진행 전에 결제 안내을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the payment reminder and let us know if you have any comments.",
+    "emailTranslation": "결제 안내을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "payment reminder update",
+      "payment reminder issue",
+      "payment reminder review"
+    ],
+    "visual": "📄 결제 안내\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-042",
+    "day": 14,
+    "word": "carry out",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "수행하다",
+      "실시하다"
+    ],
+    "example": "We need to carry out this issue today.",
+    "translation": "오늘 이 문제를 수행하다해야 합니다.",
+    "emailExample": "We will carry out this matter and get back to you.",
+    "emailTranslation": "이 사안을 수행하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "carry out update",
+      "carry out issue",
+      "carry out review"
+    ],
+    "visual": "상황 발생\n↓\n수행하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-043",
+    "day": 15,
+    "word": "optimize",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "최적화하다",
+      "효율을 높이다"
+    ],
+    "example": "We need to review the optimize before moving forward.",
+    "translation": "진행하기 전에 최적화하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the optimize and will provide an update shortly.",
+    "emailTranslation": "최적화하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "optimize update",
+      "optimize issue",
+      "optimize review"
+    ],
+    "visual": "업무 상황\n↓\n최적화하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-044",
+    "day": 15,
+    "word": "material availability",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "자재 수급 가능 여부",
+      "자재 확보 상태"
+    ],
+    "example": "Please confirm the material availability before we proceed.",
+    "translation": "진행 전에 자재 수급 가능 여부을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the material availability and let us know if you have any comments.",
+    "emailTranslation": "자재 수급 가능 여부을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "material availability update",
+      "material availability issue",
+      "material availability review"
+    ],
+    "visual": "📄 자재 수급 가능 여부\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-045",
+    "day": 15,
+    "word": "reach out to",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "연락하다",
+      "접촉하다"
+    ],
+    "example": "We need to reach out to this issue today.",
+    "translation": "오늘 이 문제를 연락하다해야 합니다.",
+    "emailExample": "We will reach out to this matter and get back to you.",
+    "emailTranslation": "이 사안을 연락하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "reach out to update",
+      "reach out to issue",
+      "reach out to review"
+    ],
+    "visual": "상황 발생\n↓\n연락하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-046",
+    "day": 16,
+    "word": "constraint",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "제약 조건",
+      "제한 요소"
+    ],
+    "example": "We need to review the constraint before moving forward.",
+    "translation": "진행하기 전에 제약 조건을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the constraint and will provide an update shortly.",
+    "emailTranslation": "제약 조건을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "constraint update",
+      "constraint issue",
+      "constraint review"
+    ],
+    "visual": "업무 상황\n↓\n제약 조건\n↓\n의사결정"
+  },
+  {
+    "id": "s1-047",
+    "day": 16,
+    "word": "concession request",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "특채 요청",
+      "예외 승인 요청"
+    ],
+    "example": "Please confirm the concession request before we proceed.",
+    "translation": "진행 전에 특채 요청을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the concession request and let us know if you have any comments.",
+    "emailTranslation": "특채 요청을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "concession request update",
+      "concession request issue",
+      "concession request review"
+    ],
+    "visual": "📄 특채 요청\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-048",
+    "day": 16,
+    "word": "move forward",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "진행하다",
+      "다음 단계로 넘어가다"
+    ],
+    "example": "We need to move forward this issue today.",
+    "translation": "오늘 이 문제를 진행하다해야 합니다.",
+    "emailExample": "We will move forward this matter and get back to you.",
+    "emailTranslation": "이 사안을 진행하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "move forward update",
+      "move forward issue",
+      "move forward review"
+    ],
+    "visual": "상황 발생\n↓\n진행하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-049",
+    "day": 17,
+    "word": "feasibility review",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "타당성 검토",
+      "실현 가능성 검토"
+    ],
+    "example": "We need to review the feasibility review before moving forward.",
+    "translation": "진행하기 전에 타당성 검토을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the feasibility review and will provide an update shortly.",
+    "emailTranslation": "타당성 검토을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "feasibility review update",
+      "feasibility review issue",
+      "feasibility review review"
+    ],
+    "visual": "업무 상황\n↓\n타당성 검토\n↓\n의사결정"
+  },
+  {
+    "id": "s1-050",
+    "day": 17,
+    "word": "corrective action",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "시정 조치",
+      "문제 개선 조치"
+    ],
+    "example": "Please confirm the corrective action before we proceed.",
+    "translation": "진행 전에 시정 조치을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the corrective action and let us know if you have any comments.",
+    "emailTranslation": "시정 조치을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "corrective action update",
+      "corrective action issue",
+      "corrective action review"
+    ],
+    "visual": "📄 시정 조치\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-051",
+    "day": 17,
+    "word": "touch base",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "간단히 연락하다",
+      "진행 상황을 확인하다"
+    ],
+    "example": "We need to touch base this issue today.",
+    "translation": "오늘 이 문제를 간단히 연락하다해야 합니다.",
+    "emailExample": "We will touch base this matter and get back to you.",
+    "emailTranslation": "이 사안을 간단히 연락하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "touch base update",
+      "touch base issue",
+      "touch base review"
+    ],
+    "visual": "상황 발생\n↓\n간단히 연락하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-052",
+    "day": 18,
+    "word": "dependency",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "의존 관계",
+      "선행 조건"
+    ],
+    "example": "We need to review the dependency before moving forward.",
+    "translation": "진행하기 전에 의존 관계을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the dependency and will provide an update shortly.",
+    "emailTranslation": "의존 관계을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "dependency update",
+      "dependency issue",
+      "dependency review"
+    ],
+    "visual": "업무 상황\n↓\n의존 관계\n↓\n의사결정"
+  },
+  {
+    "id": "s1-053",
+    "day": 18,
+    "word": "release note",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "출하 승인서",
+      "릴리즈 문서"
+    ],
+    "example": "Please confirm the release note before we proceed.",
+    "translation": "진행 전에 출하 승인서을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the release note and let us know if you have any comments.",
+    "emailTranslation": "출하 승인서을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "release note update",
+      "release note issue",
+      "release note review"
+    ],
+    "visual": "📄 출하 승인서\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-054",
+    "day": 18,
+    "word": "circle back",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "다시 논의하다",
+      "추후 재검토하다"
+    ],
+    "example": "We need to circle back this issue today.",
+    "translation": "오늘 이 문제를 다시 논의하다해야 합니다.",
+    "emailExample": "We will circle back this matter and get back to you.",
+    "emailTranslation": "이 사안을 다시 논의하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "circle back update",
+      "circle back issue",
+      "circle back review"
+    ],
+    "visual": "상황 발생\n↓\n다시 논의하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-055",
+    "day": 19,
+    "word": "follow through",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "끝까지 실행하다",
+      "약속을 이행하다"
+    ],
+    "example": "We need to review the follow through before moving forward.",
+    "translation": "진행하기 전에 끝까지 실행하다을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the follow through and will provide an update shortly.",
+    "emailTranslation": "끝까지 실행하다을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "follow through update",
+      "follow through issue",
+      "follow through review"
+    ],
+    "visual": "업무 상황\n↓\n끝까지 실행하다\n↓\n의사결정"
+  },
+  {
+    "id": "s1-056",
+    "day": 19,
+    "word": "vendor registration",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "벤더 등록",
+      "공급업체 등록"
+    ],
+    "example": "Please confirm the vendor registration before we proceed.",
+    "translation": "진행 전에 벤더 등록을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the vendor registration and let us know if you have any comments.",
+    "emailTranslation": "벤더 등록을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "vendor registration update",
+      "vendor registration issue",
+      "vendor registration review"
+    ],
+    "visual": "📄 벤더 등록\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-057",
+    "day": 19,
+    "word": "on track",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "계획대로 진행 중인",
+      "정상 진행 중인"
+    ],
+    "example": "We need to review the on track before moving forward.",
+    "translation": "진행하기 전에 계획대로 진행 중인을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the on track and will provide an update shortly.",
+    "emailTranslation": "계획대로 진행 중인을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "on track update",
+      "on track issue",
+      "on track review"
+    ],
+    "visual": "업무 상황\n↓\n계획대로 진행 중인\n↓\n의사결정"
+  },
+  {
+    "id": "s1-058",
+    "day": 20,
+    "word": "action item",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "실행 항목",
+      "후속 조치 사항"
+    ],
+    "example": "We need to review the action item before moving forward.",
+    "translation": "진행하기 전에 실행 항목을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the action item and will provide an update shortly.",
+    "emailTranslation": "실행 항목을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "action item update",
+      "action item issue",
+      "action item review"
+    ],
+    "visual": "업무 상황\n↓\n실행 항목\n↓\n의사결정"
+  },
+  {
+    "id": "s1-059",
+    "day": 20,
+    "word": "approved vendor list",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "승인 벤더 리스트",
+      "승인 공급업체 목록"
+    ],
+    "example": "Please confirm the approved vendor list before we proceed.",
+    "translation": "진행 전에 승인 벤더 리스트을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the approved vendor list and let us know if you have any comments.",
+    "emailTranslation": "승인 벤더 리스트을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "approved vendor list update",
+      "approved vendor list issue",
+      "approved vendor list review"
+    ],
+    "visual": "📄 승인 벤더 리스트\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-060",
+    "day": 20,
+    "word": "check in",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "확인하다",
+      "체크인하다"
+    ],
+    "example": "We need to check in this issue today.",
+    "translation": "오늘 이 문제를 확인하다해야 합니다.",
+    "emailExample": "We will check in this matter and get back to you.",
+    "emailTranslation": "이 사안을 확인하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "check in update",
+      "check in issue",
+      "check in review"
+    ],
+    "visual": "상황 발생\n↓\n확인하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-061",
+    "day": 21,
+    "word": "behind schedule",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "일정이 지연된",
+      "계획보다 늦은"
+    ],
+    "example": "We need to review the behind schedule before moving forward.",
+    "translation": "진행하기 전에 일정이 지연된을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the behind schedule and will provide an update shortly.",
+    "emailTranslation": "일정이 지연된을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "behind schedule update",
+      "behind schedule issue",
+      "behind schedule review"
+    ],
+    "visual": "업무 상황\n↓\n일정이 지연된\n↓\n의사결정"
+  },
+  {
+    "id": "s1-062",
+    "day": 21,
+    "word": "capacity constraint",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "생산 능력 제약",
+      "설비 한계"
+    ],
+    "example": "Please confirm the capacity constraint before we proceed.",
+    "translation": "진행 전에 생산 능력 제약을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the capacity constraint and let us know if you have any comments.",
+    "emailTranslation": "생산 능력 제약을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "capacity constraint update",
+      "capacity constraint issue",
+      "capacity constraint review"
+    ],
+    "visual": "📄 생산 능력 제약\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-063",
+    "day": 21,
+    "word": "hold on",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "잠시 기다리다",
+      "보류하다"
+    ],
+    "example": "We need to hold on this issue today.",
+    "translation": "오늘 이 문제를 잠시 기다리다해야 합니다.",
+    "emailExample": "We will hold on this matter and get back to you.",
+    "emailTranslation": "이 사안을 잠시 기다리다한 뒤 회신드리겠습니다.",
+    "related": [
+      "hold on update",
+      "hold on issue",
+      "hold on review"
+    ],
+    "visual": "상황 발생\n↓\n잠시 기다리다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-064",
+    "day": 22,
+    "word": "under review",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "검토 중인",
+      "심사 중인"
+    ],
+    "example": "We need to review the under review before moving forward.",
+    "translation": "진행하기 전에 검토 중인을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the under review and will provide an update shortly.",
+    "emailTranslation": "검토 중인을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "under review update",
+      "under review issue",
+      "under review review"
+    ],
+    "visual": "업무 상황\n↓\n검토 중인\n↓\n의사결정"
+  },
+  {
+    "id": "s1-065",
+    "day": 22,
+    "word": "scope of supply",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "공급 범위",
+      "납품 범위"
+    ],
+    "example": "Please confirm the scope of supply before we proceed.",
+    "translation": "진행 전에 공급 범위을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the scope of supply and let us know if you have any comments.",
+    "emailTranslation": "공급 범위을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "scope of supply update",
+      "scope of supply issue",
+      "scope of supply review"
+    ],
+    "visual": "📄 공급 범위\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-066",
+    "day": 22,
+    "word": "turn down",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "거절하다",
+      "낮추다"
+    ],
+    "example": "We need to turn down this issue today.",
+    "translation": "오늘 이 문제를 거절하다해야 합니다.",
+    "emailExample": "We will turn down this matter and get back to you.",
+    "emailTranslation": "이 사안을 거절하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "turn down update",
+      "turn down issue",
+      "turn down review"
+    ],
+    "visual": "상황 발생\n↓\n거절하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-067",
+    "day": 23,
+    "word": "resource allocation",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "자원 배분",
+      "인력 배정"
+    ],
+    "example": "We need to review the resource allocation before moving forward.",
+    "translation": "진행하기 전에 자원 배분을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the resource allocation and will provide an update shortly.",
+    "emailTranslation": "자원 배분을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "resource allocation update",
+      "resource allocation issue",
+      "resource allocation review"
+    ],
+    "visual": "업무 상황\n↓\n자원 배분\n↓\n의사결정"
+  },
+  {
+    "id": "s1-068",
+    "day": 23,
+    "word": "technical offer",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "기술 제안서",
+      "기술 제안"
+    ],
+    "example": "Please confirm the technical offer before we proceed.",
+    "translation": "진행 전에 기술 제안서을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the technical offer and let us know if you have any comments.",
+    "emailTranslation": "기술 제안서을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "technical offer update",
+      "technical offer issue",
+      "technical offer review"
+    ],
+    "visual": "📄 기술 제안서\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-069",
+    "day": 23,
+    "word": "look up",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "찾아보다",
+      "조회하다"
+    ],
+    "example": "We need to look up this issue today.",
+    "translation": "오늘 이 문제를 찾아보다해야 합니다.",
+    "emailExample": "We will look up this matter and get back to you.",
+    "emailTranslation": "이 사안을 찾아보다한 뒤 회신드리겠습니다.",
+    "related": [
+      "look up update",
+      "look up issue",
+      "look up review"
+    ],
+    "visual": "상황 발생\n↓\n찾아보다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-070",
+    "day": 24,
+    "word": "assumption",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "가정",
+      "전제 조건"
+    ],
+    "example": "We need to review the assumption before moving forward.",
+    "translation": "진행하기 전에 가정을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the assumption and will provide an update shortly.",
+    "emailTranslation": "가정을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "assumption update",
+      "assumption issue",
+      "assumption review"
+    ],
+    "visual": "업무 상황\n↓\n가정\n↓\n의사결정"
+  },
+  {
+    "id": "s1-071",
+    "day": 24,
+    "word": "delivery commitment",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "납기 약속",
+      "공급 일정 보장"
+    ],
+    "example": "Please confirm the delivery commitment before we proceed.",
+    "translation": "진행 전에 납기 약속을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the delivery commitment and let us know if you have any comments.",
+    "emailTranslation": "납기 약속을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "delivery commitment update",
+      "delivery commitment issue",
+      "delivery commitment review"
+    ],
+    "visual": "📄 납기 약속\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-072",
+    "day": 24,
+    "word": "get through",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "끝내다",
+      "통과하다"
+    ],
+    "example": "We need to get through this issue today.",
+    "translation": "오늘 이 문제를 끝내다해야 합니다.",
+    "emailExample": "We will get through this matter and get back to you.",
+    "emailTranslation": "이 사안을 끝내다한 뒤 회신드리겠습니다.",
+    "related": [
+      "get through update",
+      "get through issue",
+      "get through review"
+    ],
+    "visual": "상황 발생\n↓\n끝내다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-073",
+    "day": 25,
+    "word": "risk assessment",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "위험 평가",
+      "리스크 분석"
+    ],
+    "example": "We need to review the risk assessment before moving forward.",
+    "translation": "진행하기 전에 위험 평가을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the risk assessment and will provide an update shortly.",
+    "emailTranslation": "위험 평가을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "risk assessment update",
+      "risk assessment issue",
+      "risk assessment review"
+    ],
+    "visual": "업무 상황\n↓\n위험 평가\n↓\n의사결정"
+  },
+  {
+    "id": "s1-074",
+    "day": 25,
+    "word": "procurement",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "구매",
+      "조달"
+    ],
+    "example": "Please confirm the procurement before we proceed.",
+    "translation": "진행 전에 구매을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the procurement and let us know if you have any comments.",
+    "emailTranslation": "구매을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "procurement update",
+      "procurement issue",
+      "procurement review"
+    ],
+    "visual": "📄 구매\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-075",
+    "day": 25,
+    "word": "stay on top of",
+    "category": "daily",
+    "level": "advanced",
+    "meanings": [
+      "지속적으로 관리하다",
+      "놓치지 않고 챙기다"
+    ],
+    "example": "We need to stay on top of this issue today.",
+    "translation": "오늘 이 문제를 지속적으로 관리하다해야 합니다.",
+    "emailExample": "We will stay on top of this matter and get back to you.",
+    "emailTranslation": "이 사안을 지속적으로 관리하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "stay on top of update",
+      "stay on top of issue",
+      "stay on top of review"
+    ],
+    "visual": "상황 발생\n↓\n지속적으로 관리하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-076",
+    "day": 26,
+    "word": "market trend",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "시장 동향",
+      "시장 흐름"
+    ],
+    "example": "We need to review the market trend before moving forward.",
+    "translation": "진행하기 전에 시장 동향을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the market trend and will provide an update shortly.",
+    "emailTranslation": "시장 동향을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "market trend update",
+      "market trend issue",
+      "market trend review"
+    ],
+    "visual": "업무 상황\n↓\n시장 동향\n↓\n의사결정"
+  },
+  {
+    "id": "s1-077",
+    "day": 26,
+    "word": "supply chain",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "공급망",
+      "공급 체인"
+    ],
+    "example": "Please confirm the supply chain before we proceed.",
+    "translation": "진행 전에 공급망을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the supply chain and let us know if you have any comments.",
+    "emailTranslation": "공급망을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "supply chain update",
+      "supply chain issue",
+      "supply chain review"
+    ],
+    "visual": "📄 공급망\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-078",
+    "day": 26,
+    "word": "end up",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "결국 ~하게 되다",
+      "최종적으로 ~가 되다"
+    ],
+    "example": "We need to end up this issue today.",
+    "translation": "오늘 이 문제를 결국 ~하게 되다해야 합니다.",
+    "emailExample": "We will end up this matter and get back to you.",
+    "emailTranslation": "이 사안을 결국 ~하게 되다한 뒤 회신드리겠습니다.",
+    "related": [
+      "end up update",
+      "end up issue",
+      "end up review"
+    ],
+    "visual": "상황 발생\n↓\n결국 ~하게 되다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-079",
+    "day": 27,
+    "word": "business impact",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "사업 영향",
+      "경영 영향"
+    ],
+    "example": "We need to review the business impact before moving forward.",
+    "translation": "진행하기 전에 사업 영향을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the business impact and will provide an update shortly.",
+    "emailTranslation": "사업 영향을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "business impact update",
+      "business impact issue",
+      "business impact review"
+    ],
+    "visual": "업무 상황\n↓\n사업 영향\n↓\n의사결정"
+  },
+  {
+    "id": "s1-080",
+    "day": 27,
+    "word": "logistics",
+    "category": "sales",
+    "level": "intermediate",
+    "meanings": [
+      "물류",
+      "운송 관리"
+    ],
+    "example": "Please confirm the logistics before we proceed.",
+    "translation": "진행 전에 물류을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the logistics and let us know if you have any comments.",
+    "emailTranslation": "물류을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "logistics update",
+      "logistics issue",
+      "logistics review"
+    ],
+    "visual": "📄 물류\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-081",
+    "day": 27,
+    "word": "follow through with",
+    "category": "daily",
+    "level": "advanced",
+    "meanings": [
+      "끝까지 실행하다",
+      "약속을 지키다"
+    ],
+    "example": "We need to follow through with this issue today.",
+    "translation": "오늘 이 문제를 끝까지 실행하다해야 합니다.",
+    "emailExample": "We will follow through with this matter and get back to you.",
+    "emailTranslation": "이 사안을 끝까지 실행하다한 뒤 회신드리겠습니다.",
+    "related": [
+      "follow through with update",
+      "follow through with issue",
+      "follow through with review"
+    ],
+    "visual": "상황 발생\n↓\n끝까지 실행하다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-082",
+    "day": 28,
+    "word": "timeline",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "일정표",
+      "진행 일정"
+    ],
+    "example": "We need to review the timeline before moving forward.",
+    "translation": "진행하기 전에 일정표을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the timeline and will provide an update shortly.",
+    "emailTranslation": "일정표을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "timeline update",
+      "timeline issue",
+      "timeline review"
+    ],
+    "visual": "업무 상황\n↓\n일정표\n↓\n의사결정"
+  },
+  {
+    "id": "s1-083",
+    "day": 28,
+    "word": "demand forecast",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "수요 예측",
+      "판매 예측"
+    ],
+    "example": "Please confirm the demand forecast before we proceed.",
+    "translation": "진행 전에 수요 예측을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the demand forecast and let us know if you have any comments.",
+    "emailTranslation": "수요 예측을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "demand forecast update",
+      "demand forecast issue",
+      "demand forecast review"
+    ],
+    "visual": "📄 수요 예측\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-084",
+    "day": 28,
+    "word": "bring forward",
+    "category": "daily",
+    "level": "intermediate",
+    "meanings": [
+      "앞당기다",
+      "조기 진행하다"
+    ],
+    "example": "We need to bring forward this issue today.",
+    "translation": "오늘 이 문제를 앞당기다해야 합니다.",
+    "emailExample": "We will bring forward this matter and get back to you.",
+    "emailTranslation": "이 사안을 앞당기다한 뒤 회신드리겠습니다.",
+    "related": [
+      "bring forward update",
+      "bring forward issue",
+      "bring forward review"
+    ],
+    "visual": "상황 발생\n↓\n앞당기다\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-085",
+    "day": 29,
+    "word": "inventory",
+    "category": "business",
+    "level": "intermediate",
+    "meanings": [
+      "재고",
+      "재고 자산"
+    ],
+    "example": "We need to review the inventory before moving forward.",
+    "translation": "진행하기 전에 재고을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the inventory and will provide an update shortly.",
+    "emailTranslation": "재고을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "inventory update",
+      "inventory issue",
+      "inventory review"
+    ],
+    "visual": "업무 상황\n↓\n재고\n↓\n의사결정"
+  },
+  {
+    "id": "s1-086",
+    "day": 29,
+    "word": "factory acceptance test",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "FAT",
+      "공장 인수 시험"
+    ],
+    "example": "Please confirm the factory acceptance test before we proceed.",
+    "translation": "진행 전에 FAT을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the factory acceptance test and let us know if you have any comments.",
+    "emailTranslation": "FAT을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "factory acceptance test update",
+      "factory acceptance test issue",
+      "factory acceptance test review"
+    ],
+    "visual": "📄 FAT\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-087",
+    "day": 29,
+    "word": "workaround",
+    "category": "daily",
+    "level": "advanced",
+    "meanings": [
+      "우회 해결책",
+      "임시 해결책"
+    ],
+    "example": "We need to workaround this issue today.",
+    "translation": "오늘 이 문제를 우회 해결책해야 합니다.",
+    "emailExample": "We will workaround this matter and get back to you.",
+    "emailTranslation": "이 사안을 우회 해결책한 뒤 회신드리겠습니다.",
+    "related": [
+      "workaround update",
+      "workaround issue",
+      "workaround review"
+    ],
+    "visual": "상황 발생\n↓\n우회 해결책\n↓\n다음 단계"
+  },
+  {
+    "id": "s1-088",
+    "day": 30,
+    "word": "value proposition",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "가치 제안",
+      "핵심 강점"
+    ],
+    "example": "We need to review the value proposition before moving forward.",
+    "translation": "진행하기 전에 가치 제안을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the value proposition and will provide an update shortly.",
+    "emailTranslation": "가치 제안을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "value proposition update",
+      "value proposition issue",
+      "value proposition review"
+    ],
+    "visual": "업무 상황\n↓\n가치 제안\n↓\n의사결정"
+  },
+  {
+    "id": "s1-089",
+    "day": 30,
+    "word": "alternative material",
+    "category": "sales",
+    "level": "advanced",
+    "meanings": [
+      "대체 재질",
+      "대체 자재"
+    ],
+    "example": "Please confirm the alternative material before we proceed.",
+    "translation": "진행 전에 대체 재질을/를 확인 부탁드립니다.",
+    "emailExample": "Please review the alternative material and let us know if you have any comments.",
+    "emailTranslation": "대체 재질을/를 검토하시고 의견이 있으시면 알려주시기 바랍니다.",
+    "related": [
+      "alternative material update",
+      "alternative material issue",
+      "alternative material review"
+    ],
+    "visual": "📄 대체 재질\n↓\n검토 / 확인\n↓\n진행"
+  },
+  {
+    "id": "s1-090",
+    "day": 30,
+    "word": "market share",
+    "category": "business",
+    "level": "advanced",
+    "meanings": [
+      "시장 점유율",
+      "시장 비중"
+    ],
+    "example": "We need to review the market share before moving forward.",
+    "translation": "진행하기 전에 시장 점유율을/를 검토해야 합니다.",
+    "emailExample": "We are reviewing the market share and will provide an update shortly.",
+    "emailTranslation": "시장 점유율을/를 검토 중이며 곧 업데이트 드리겠습니다.",
+    "related": [
+      "market share update",
+      "market share issue",
+      "market share review"
+    ],
+    "visual": "업무 상황\n↓\n시장 점유율\n↓\n의사결정"
+  }
+]

@@ -1,1 +1,1 @@
-export default function handler(req,res){res.status(200).json({mode:'static-v3'});}
+export default function handler(req,res){res.status(200).json({mode:'v4-season1'});}
