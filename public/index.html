@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Daily English Coach 600</title>
+<title>Daily English Coach V3</title>
 <style>
 body{margin:0;background:#f4f6fb;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111827}
 header{background:linear-gradient(135deg,#2563eb,#4f46e5);color:white;padding:26px 18px;text-align:center}
@@ -24,7 +24,7 @@ select{padding:10px;border:1px solid #e5e7eb;border-radius:12px;background:white
 @media(max-width:700px){.tabs{grid-template-columns:1fr 1fr}.flash{height:455px}.word{font-size:28px}.meaning-front{font-size:16px}}
 </style></head>
 <body>
-<header><h1>Daily English Coach 600</h1><p>해외영업 40% · 비즈니스 30% · 일상 30% · 최근 60일 중복 방지</p></header>
+<header><h1>Daily English Coach V3</h1><p>비즈니스 40% · 해외영업 30% · 일상 30% · 중급/고급 전용</p></header>
 <main>
 <div class="tabs"><button class="tab active" onclick="showTab('today',this)">오늘</button><button class="tab" onclick="showTab('records',this)">기록</button><button class="tab" onclick="showTab('review',this)">복습</button><button class="tab" onclick="showTab('stats',this)">통계</button></div>
 
@@ -32,10 +32,10 @@ select{padding:10px;border:1px solid #e5e7eb;border-radius:12px;background:white
 <div id="sunday"></div><div class="status" id="status">단어 DB를 불러오는 중...</div>
 <div class="stats"><div class="card"><span class="muted">총 DB</span><br><b id="dbCount">-</b></div><div class="card"><span class="muted">연속 학습</span><br><b id="streak">0일</b></div><div class="card"><span class="muted">최근 60일 제외</span><br><b id="avoidCount">0개</b></div></div>
 <div class="top"><div><h2 style="margin:0">오늘의 단어 3개</h2><div class="muted" id="dateText"></div></div>
-<div><select id="category" onchange="changeSettings()"><option value="mixed">혼합 40/30/30</option><option value="sales">해외영업</option><option value="business">비즈니스</option><option value="daily">일상회화</option></select>
-<select id="level" onchange="changeSettings()"><option value="all">전체 난이도</option><option value="beginner">초급</option><option value="intermediate">중급</option><option value="advanced">고급</option></select></div></div>
+<div><select id="category" onchange="changeSettings()"><option value="mixed">혼합 30/40/30</option><option value="sales">해외영업</option><option value="business">비즈니스</option><option value="daily">일상회화</option></select>
+<select id="level" onchange="changeSettings()"><option value="all">전체 난이도</option><option value="intermediate">중급</option><option value="advanced">고급</option></select></div></div>
 <div class="grid" id="cards"></div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="success" onclick="completeToday()">다 외웠어요 ✅</button><button class="primary" onclick="regenerateWords()">새 단어 다시 뽑기</button><button class="secondary" onclick="speakAll()">발음 듣기 🔊</button></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="success" onclick="completeToday()">다 외웠어요 ✅</button><button class="secondary" onclick="speakAll()">발음 듣기 🔊</button></div>
 </section>
 
 <section id="records" class="panel"><div class="top"><h2 style="margin:0">학습 기록</h2><button class="danger" onclick="clearRecords()">전체 삭제</button></div><div class="card" id="recordsBox"></div></section>
@@ -48,34 +48,37 @@ function todayKey(){return new Date().toISOString().slice(0,10)}
 function fmt(k){return new Date(k+"T00:00:00").toLocaleDateString("ko-KR",{year:"numeric",month:"long",day:"numeric",weekday:"long"})}
 function load(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}
 function save(k,v){localStorage.setItem(k,JSON.stringify(v))}
-function records(){return load("records600",{})}
-function getCat(){return localStorage.getItem("cat600")||"mixed"}
-function getLevel(){return localStorage.getItem("level600")||"all"}
+function records(){return load("recordsV3",{})}
+function getCat(){return localStorage.getItem("catV3")||"mixed"}
+function getLevel(){return localStorage.getItem("levelV3")||"all"}
 function setStatus(t){document.getElementById("status").textContent=t}
 function daysAgo(n){let d=new Date();d.setDate(d.getDate()-n);return d.toISOString().slice(0,10)}
 function recentLearned(days=60){let r=records(), set=new Set();for(let i=0;i<days;i++){let item=r[daysAgo(i)];if(item)(item.words||[]).forEach(w=>set.add(w.id))}return set}
 function streak(){let r=records(), s=0;for(let i=0;i<365;i++){if(r[daysAgo(i)]?.completed)s++;else break}return s}
+function seededRandom(seed){let h=0;for(let i=0;i<seed.length;i++)h=(h*31+seed.charCodeAt(i))>>>0;return function(){h=(h*1664525+1013904223)>>>0;return h/4294967296}}
 function pool(){let c=getCat(), l=getLevel(); let arr=WORDS.filter(w=>l==="all"||w.level===l); if(c==="mixed") return arr; return arr.filter(w=>w.category===c);}
-function pickByRatio(arr, avoid){let c=getCat(); let selected=[]; function pickOne(cat){let p=arr.filter(w=>(cat==="any"||w.category===cat)&&!avoid.has(w.id)&&!selected.some(x=>x.id===w.id)); if(!p.length)p=arr.filter(w=>(cat==="any"||w.category===cat)&&!selected.some(x=>x.id===w.id)); if(!p.length)return null; return p[Math.floor(Math.random()*p.length)];} if(c==="mixed"){["sales","business","daily"].forEach(cat=>{let v=pickOne(cat); if(v)selected.push(v)});} else {while(selected.length<3){let v=pickOne(c); if(!v)break; selected.push(v);}} while(selected.length<3){let v=pickOne("any"); if(!v)break; selected.push(v);} return selected.slice(0,3);}
-function todayWords(force=false){const key="words600_"+todayKey()+"_"+getCat()+"_"+getLevel(); if(!force && localStorage.getItem(key))return load(key,[]); const selected=pickByRatio(pool(), recentLearned(60)); save(key,selected); return selected;}
-function render(){const words=todayWords();document.getElementById("cards").innerHTML=words.map(w=>`<div class="flash" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="face front"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><div class="word">${w.word}</div><div class="meaning-front">${w.shortMeaning||w.meaning}</div><div class="ipa">${w.ipa}</div><button class="secondary" onclick="event.stopPropagation();speak('${safe(w.word)}')">발음 듣기 🔊</button><div class="muted" style="margin-top:20px">탭하면 예문 보기</div></div><div class="face back"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><h2>${w.word}</h2><div class="label">뜻</div><div>${w.meaning}</div><div class="label">예문</div><div class="box">${w.example}<br><span class="small">${w.translation}</span></div><div class="label">💡 연상</div><div class="box">${w.memory}</div><div class="label">관련 표현</div><div class="box">${(w.related||[]).map(x=>"• "+x).join("<br>")}</div></div></div></div>`).join(""); updateStats();}
-function regenerateWords(){localStorage.removeItem("words600_"+todayKey()+"_"+getCat()+"_"+getLevel());todayWords(true);render();setStatus("최근 60일 학습 단어를 제외하고 새 단어를 다시 뽑았습니다.")}
-function completeToday(){let r=records();r[todayKey()]={completed:true,at:new Date().toISOString(),words:todayWords()};save("records600",r);renderRecords();updateStats();setStatus("오늘 학습 완료로 저장했습니다.")}
+function pickToday(){const key="wordsV3_"+todayKey()+"_"+getCat()+"_"+getLevel(); if(localStorage.getItem(key))return load(key,[]); let arr=pool(), avoid=recentLearned(60), selected=[], rnd=seededRandom(todayKey()+getCat()+getLevel());
+ function pick(cat){let p=arr.filter(w=>(cat==="any"||w.category===cat)&&!avoid.has(w.id)&&!selected.some(x=>x.id===w.id)); if(!p.length)p=arr.filter(w=>(cat==="any"||w.category===cat)&&!selected.some(x=>x.id===w.id)); if(!p.length)return null; return p[Math.floor(rnd()*p.length)];}
+ if(getCat()==="mixed"){["sales","business","daily"].forEach(c=>{let v=pick(c); if(v)selected.push(v)});} else {while(selected.length<3){let v=pick(getCat()); if(!v)break; selected.push(v)}}
+ while(selected.length<3){let v=pick("any"); if(!v)break; selected.push(v)}
+ save(key,selected.slice(0,3)); return selected.slice(0,3);}
+function render(){const words=pickToday();document.getElementById("cards").innerHTML=words.map(w=>`<div class="flash" onclick="this.classList.toggle('flipped')"><div class="inner"><div class="face front"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><div class="word">${w.word}</div><div class="meaning-front">${w.shortMeaning||w.meaning}</div><div class="ipa">${w.ipa}</div><button class="secondary" onclick="event.stopPropagation();speak('${safe(w.word)}')">발음 듣기 🔊</button><div class="muted" style="margin-top:20px">탭하면 예문 보기</div></div><div class="face back"><span class="pill">${labelCat(w.category)}</span><span class="pill">${labelLevel(w.level)}</span><h2>${w.word}</h2><div class="label">뜻</div><div>${w.meaning}</div><div class="label">예문</div><div class="box">${w.example}<br><span class="small">${w.translation}</span></div><div class="label">💡 연상</div><div class="box">${w.memory}</div><div class="label">관련 표현</div><div class="box">${(w.related||[]).map(x=>"• "+x).join("<br>")}</div></div></div></div>`).join(""); updateStats();}
+function completeToday(){let r=records();r[todayKey()]={completed:true,at:new Date().toISOString(),words:pickToday()};save("recordsV3",r);renderRecords();updateStats();setStatus("오늘 학습 완료로 저장했습니다.")}
 function renderRecords(){let r=records(), keys=Object.keys(r).sort().reverse();document.getElementById("recordsBox").innerHTML=keys.length?keys.map(k=>`<div class="record"><div><b>${fmt(k)}</b><div class="small">${r[k].words.map(w=>w.word).join(", ")}</div></div><div>✅ 완료</div></div>`).join(""):"아직 학습 기록이 없습니다."}
-function dueWords(){let r=records(), out=[];[1,3,7,30].forEach(n=>{let item=r[daysAgo(n)];if(item)(item.words||[]).forEach(w=>{if(!out.some(x=>x.id===w.id))out.push(w)})});return out.length?out:todayWords()}
+function dueWords(){let r=records(), out=[];[1,3,7,30].forEach(n=>{let item=r[daysAgo(n)];if(item)(item.words||[]).forEach(w=>{if(!out.some(x=>x.id===w.id))out.push(w)})});return out.length?out:pickToday()}
 function weekWords(){let r=records(), out=[], now=new Date(), start=new Date(now);start.setDate(now.getDate()-((now.getDay()+6)%7));start.setHours(0,0,0,0);Object.keys(r).forEach(k=>{let d=new Date(k+"T00:00:00");if(d>=start)(r[k].words||[]).forEach(w=>{if(!out.some(x=>x.id===w.id))out.push(w)})});return out}
-function buildQuiz(){let src=[...dueWords(),...weekWords()];let uniq=[];src.forEach(w=>{if(!uniq.some(x=>x.id===w.id))uniq.push(w)}); if(!uniq.length)uniq=todayWords();let qs=uniq.sort(()=>Math.random()-.5).slice(0,5);document.getElementById("reviewSummary").innerHTML=`복습 대상: <b>${uniq.length}</b>개`;document.getElementById("quizBox").innerHTML=qs.map((w,i)=>{let opts=[w.word];while(opts.length<3){let x=WORDS[Math.floor(Math.random()*WORDS.length)].word;if(!opts.includes(x))opts.push(x)}opts.sort(()=>Math.random()-.5);let blank=w.example.replace(new RegExp(escapeReg(w.word),"i"),"_____");return `<div class="card" style="margin-bottom:12px"><b>문제 ${i+1}</b><p>${blank}</p>${opts.map(o=>`<button class="quiz-option" onclick="check(this,'${safe(o)}','${safe(w.word)}')">${o}</button>`).join("")}<p class="small">힌트: ${w.meaning}</p></div>`}).join("")}
+function buildQuiz(){let src=[...dueWords(),...weekWords()];let uniq=[];src.forEach(w=>{if(!uniq.some(x=>x.id===w.id))uniq.push(w)}); if(!uniq.length)uniq=pickToday();let qs=uniq.sort(()=>Math.random()-.5).slice(0,5);document.getElementById("reviewSummary").innerHTML=`복습 대상: <b>${uniq.length}</b>개`;document.getElementById("quizBox").innerHTML=qs.map((w,i)=>{let opts=[w.word];while(opts.length<3){let x=WORDS[Math.floor(Math.random()*WORDS.length)].word;if(!opts.includes(x))opts.push(x)}opts.sort(()=>Math.random()-.5);let blank=w.example.replace(new RegExp(escapeReg(w.word),"i"),"_____");return `<div class="card" style="margin-bottom:12px"><b>문제 ${i+1}</b><p>${blank}</p>${opts.map(o=>`<button class="quiz-option" onclick="check(this,'${safe(o)}','${safe(w.word)}')">${o}</button>`).join("")}<p class="small">힌트: ${w.meaning}</p></div>`}).join("")}
 function check(btn,sel,ans){let all=btn.parentElement.querySelectorAll(".quiz-option");all.forEach(b=>b.disabled=true);if(sel===ans){btn.classList.add("correct");btn.textContent+=" ✅"}else{btn.classList.add("wrong");btn.textContent+=" ❌";all.forEach(b=>{if(b.textContent.trim()===ans){b.classList.add("correct");b.textContent+=" ✅ 정답"}})}}
 function updateStats(){document.getElementById("dbCount").textContent=WORDS.length+"개";document.getElementById("streak").textContent=streak()+"일";document.getElementById("avoidCount").textContent=recentLearned(60).size+"개";let r=records(), learned=new Set();Object.values(r).forEach(v=>(v.words||[]).forEach(w=>learned.add(w.id)));let counts={sales:0,business:0,daily:0};WORDS.filter(w=>learned.has(w.id)).forEach(w=>counts[w.category]++);document.getElementById("statsBox").innerHTML=`<div class="card"><span class="muted">총 학습</span><br><b>${learned.size}개</b></div><div class="card"><span class="muted">해외영업</span><br><b>${counts.sales}개</b></div><div class="card"><span class="muted">비즈니스</span><br><b>${counts.business}개</b></div><div class="card"><span class="muted">일상</span><br><b>${counts.daily}개</b></div>`}
-function changeSettings(){localStorage.setItem("cat600",document.getElementById("category").value);localStorage.setItem("level600",document.getElementById("level").value);render();setStatus("설정을 변경했습니다.")}
+function changeSettings(){localStorage.setItem("catV3",document.getElementById("category").value);localStorage.setItem("levelV3",document.getElementById("level").value);Object.keys(localStorage).filter(k=>k.startsWith("wordsV3_"+todayKey())).forEach(k=>localStorage.removeItem(k));render();setStatus("설정을 변경했습니다.")}
 function showTab(id,btn){document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));document.getElementById(id).classList.add("active");btn.classList.add("active");if(id==="records")renderRecords();if(id==="review")buildQuiz();if(id==="stats")updateStats()}
-function clearRecords(){if(confirm("전체 학습 기록을 삭제할까요?")){localStorage.removeItem("records600");renderRecords();updateStats();}}
+function clearRecords(){if(confirm("전체 학습 기록을 삭제할까요?")){localStorage.removeItem("recordsV3");renderRecords();updateStats();}}
 function speak(t){if(!("speechSynthesis" in window))return;let u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.85;speechSynthesis.speak(u)}
-function speakAll(){todayWords().forEach((w,i)=>setTimeout(()=>speak(w.word+". "+w.example),i*2500))}
+function speakAll(){pickToday().forEach((w,i)=>setTimeout(()=>speak(w.word+". "+w.example),i*2500))}
 function labelCat(c){return c==="sales"?"해외영업":c==="business"?"비즈니스":"일상"}
-function labelLevel(l){return l==="beginner"?"초급":l==="intermediate"?"중급":"고급"}
+function labelLevel(l){return l==="advanced"?"고급":"중급"}
 function safe(s){return String(s).replace(/'/g,"\\'")}
 function escapeReg(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}
 document.getElementById("dateText").textContent=fmt(todayKey());document.getElementById("category").value=getCat();document.getElementById("level").value=getLevel();if(new Date().getDay()===0)document.getElementById("sunday").innerHTML='<div class="status">📚 오늘은 일요일입니다. 복습 탭에서 이번 주 단어를 복습하세요.</div>';
-fetch("words.json").then(r=>r.json()).then(data=>{WORDS=data;setStatus("600개 단어 DB 로딩 완료");render();renderRecords();buildQuiz();updateStats()}).catch(e=>{setStatus("단어 DB를 불러오지 못했습니다. words.json 파일을 확인하세요.")});
+fetch("words.json").then(r=>r.json()).then(data=>{WORDS=data;setStatus("V3 단어 DB 로딩 완료");render();renderRecords();buildQuiz();updateStats()}).catch(e=>{setStatus("단어 DB를 불러오지 못했습니다. words.json 파일을 확인하세요.")});
 </script></body></html>

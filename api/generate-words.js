@@ -1,1 +1,1 @@
-export default function handler(req,res){res.status(200).json({mode:'static-db-600-fixed-meaning'});}
+export default function handler(req,res){res.status(200).json({mode:'static-v3'});}
